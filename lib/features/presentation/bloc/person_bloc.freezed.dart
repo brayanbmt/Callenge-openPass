@@ -19,32 +19,44 @@ mixin _$PeopleEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getPeople,
+    required TResult Function(String query) searchPeople,
+    required TResult Function(Person person) addToFavorites,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getPeople,
+    TResult? Function(String query)? searchPeople,
+    TResult? Function(Person person)? addToFavorites,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getPeople,
+    TResult Function(String query)? searchPeople,
+    TResult Function(Person person)? addToFavorites,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_getPeople value) getPeople,
+    required TResult Function(_GetPeople value) getPeople,
+    required TResult Function(_SearchPeople value) searchPeople,
+    required TResult Function(_AddToFavorites value) addToFavorites,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_getPeople value)? getPeople,
+    TResult? Function(_GetPeople value)? getPeople,
+    TResult? Function(_SearchPeople value)? searchPeople,
+    TResult? Function(_AddToFavorites value)? addToFavorites,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_getPeople value)? getPeople,
+    TResult Function(_GetPeople value)? getPeople,
+    TResult Function(_SearchPeople value)? searchPeople,
+    TResult Function(_AddToFavorites value)? addToFavorites,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -72,18 +84,18 @@ class _$PeopleEventCopyWithImpl<$Res, $Val extends PeopleEvent>
 }
 
 /// @nodoc
-abstract class _$$getPeopleImplCopyWith<$Res> {
-  factory _$$getPeopleImplCopyWith(
-          _$getPeopleImpl value, $Res Function(_$getPeopleImpl) then) =
-      __$$getPeopleImplCopyWithImpl<$Res>;
+abstract class _$$GetPeopleImplCopyWith<$Res> {
+  factory _$$GetPeopleImplCopyWith(
+          _$GetPeopleImpl value, $Res Function(_$GetPeopleImpl) then) =
+      __$$GetPeopleImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$getPeopleImplCopyWithImpl<$Res>
-    extends _$PeopleEventCopyWithImpl<$Res, _$getPeopleImpl>
-    implements _$$getPeopleImplCopyWith<$Res> {
-  __$$getPeopleImplCopyWithImpl(
-      _$getPeopleImpl _value, $Res Function(_$getPeopleImpl) _then)
+class __$$GetPeopleImplCopyWithImpl<$Res>
+    extends _$PeopleEventCopyWithImpl<$Res, _$GetPeopleImpl>
+    implements _$$GetPeopleImplCopyWith<$Res> {
+  __$$GetPeopleImplCopyWithImpl(
+      _$GetPeopleImpl _value, $Res Function(_$GetPeopleImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of PeopleEvent
@@ -92,8 +104,8 @@ class __$$getPeopleImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$getPeopleImpl implements _getPeople {
-  const _$getPeopleImpl();
+class _$GetPeopleImpl implements _GetPeople {
+  const _$GetPeopleImpl();
 
   @override
   String toString() {
@@ -103,7 +115,7 @@ class _$getPeopleImpl implements _getPeople {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$getPeopleImpl);
+        (other.runtimeType == runtimeType && other is _$GetPeopleImpl);
   }
 
   @override
@@ -113,6 +125,8 @@ class _$getPeopleImpl implements _getPeople {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getPeople,
+    required TResult Function(String query) searchPeople,
+    required TResult Function(Person person) addToFavorites,
   }) {
     return getPeople();
   }
@@ -121,6 +135,8 @@ class _$getPeopleImpl implements _getPeople {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getPeople,
+    TResult? Function(String query)? searchPeople,
+    TResult? Function(Person person)? addToFavorites,
   }) {
     return getPeople?.call();
   }
@@ -129,6 +145,8 @@ class _$getPeopleImpl implements _getPeople {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getPeople,
+    TResult Function(String query)? searchPeople,
+    TResult Function(Person person)? addToFavorites,
     required TResult orElse(),
   }) {
     if (getPeople != null) {
@@ -140,7 +158,9 @@ class _$getPeopleImpl implements _getPeople {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_getPeople value) getPeople,
+    required TResult Function(_GetPeople value) getPeople,
+    required TResult Function(_SearchPeople value) searchPeople,
+    required TResult Function(_AddToFavorites value) addToFavorites,
   }) {
     return getPeople(this);
   }
@@ -148,7 +168,9 @@ class _$getPeopleImpl implements _getPeople {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_getPeople value)? getPeople,
+    TResult? Function(_GetPeople value)? getPeople,
+    TResult? Function(_SearchPeople value)? searchPeople,
+    TResult? Function(_AddToFavorites value)? addToFavorites,
   }) {
     return getPeople?.call(this);
   }
@@ -156,7 +178,9 @@ class _$getPeopleImpl implements _getPeople {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_getPeople value)? getPeople,
+    TResult Function(_GetPeople value)? getPeople,
+    TResult Function(_SearchPeople value)? searchPeople,
+    TResult Function(_AddToFavorites value)? addToFavorites,
     required TResult orElse(),
   }) {
     if (getPeople != null) {
@@ -166,8 +190,301 @@ class _$getPeopleImpl implements _getPeople {
   }
 }
 
-abstract class _getPeople implements PeopleEvent {
-  const factory _getPeople() = _$getPeopleImpl;
+abstract class _GetPeople implements PeopleEvent {
+  const factory _GetPeople() = _$GetPeopleImpl;
+}
+
+/// @nodoc
+abstract class _$$SearchPeopleImplCopyWith<$Res> {
+  factory _$$SearchPeopleImplCopyWith(
+          _$SearchPeopleImpl value, $Res Function(_$SearchPeopleImpl) then) =
+      __$$SearchPeopleImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String query});
+}
+
+/// @nodoc
+class __$$SearchPeopleImplCopyWithImpl<$Res>
+    extends _$PeopleEventCopyWithImpl<$Res, _$SearchPeopleImpl>
+    implements _$$SearchPeopleImplCopyWith<$Res> {
+  __$$SearchPeopleImplCopyWithImpl(
+      _$SearchPeopleImpl _value, $Res Function(_$SearchPeopleImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PeopleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? query = null,
+  }) {
+    return _then(_$SearchPeopleImpl(
+      null == query
+          ? _value.query
+          : query // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SearchPeopleImpl implements _SearchPeople {
+  const _$SearchPeopleImpl(this.query);
+
+  @override
+  final String query;
+
+  @override
+  String toString() {
+    return 'PeopleEvent.searchPeople(query: $query)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SearchPeopleImpl &&
+            (identical(other.query, query) || other.query == query));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, query);
+
+  /// Create a copy of PeopleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchPeopleImplCopyWith<_$SearchPeopleImpl> get copyWith =>
+      __$$SearchPeopleImplCopyWithImpl<_$SearchPeopleImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getPeople,
+    required TResult Function(String query) searchPeople,
+    required TResult Function(Person person) addToFavorites,
+  }) {
+    return searchPeople(query);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getPeople,
+    TResult? Function(String query)? searchPeople,
+    TResult? Function(Person person)? addToFavorites,
+  }) {
+    return searchPeople?.call(query);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getPeople,
+    TResult Function(String query)? searchPeople,
+    TResult Function(Person person)? addToFavorites,
+    required TResult orElse(),
+  }) {
+    if (searchPeople != null) {
+      return searchPeople(query);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetPeople value) getPeople,
+    required TResult Function(_SearchPeople value) searchPeople,
+    required TResult Function(_AddToFavorites value) addToFavorites,
+  }) {
+    return searchPeople(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetPeople value)? getPeople,
+    TResult? Function(_SearchPeople value)? searchPeople,
+    TResult? Function(_AddToFavorites value)? addToFavorites,
+  }) {
+    return searchPeople?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetPeople value)? getPeople,
+    TResult Function(_SearchPeople value)? searchPeople,
+    TResult Function(_AddToFavorites value)? addToFavorites,
+    required TResult orElse(),
+  }) {
+    if (searchPeople != null) {
+      return searchPeople(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SearchPeople implements PeopleEvent {
+  const factory _SearchPeople(final String query) = _$SearchPeopleImpl;
+
+  String get query;
+
+  /// Create a copy of PeopleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SearchPeopleImplCopyWith<_$SearchPeopleImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddToFavoritesImplCopyWith<$Res> {
+  factory _$$AddToFavoritesImplCopyWith(_$AddToFavoritesImpl value,
+          $Res Function(_$AddToFavoritesImpl) then) =
+      __$$AddToFavoritesImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Person person});
+}
+
+/// @nodoc
+class __$$AddToFavoritesImplCopyWithImpl<$Res>
+    extends _$PeopleEventCopyWithImpl<$Res, _$AddToFavoritesImpl>
+    implements _$$AddToFavoritesImplCopyWith<$Res> {
+  __$$AddToFavoritesImplCopyWithImpl(
+      _$AddToFavoritesImpl _value, $Res Function(_$AddToFavoritesImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PeopleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? person = null,
+  }) {
+    return _then(_$AddToFavoritesImpl(
+      null == person
+          ? _value.person
+          : person // ignore: cast_nullable_to_non_nullable
+              as Person,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddToFavoritesImpl implements _AddToFavorites {
+  const _$AddToFavoritesImpl(this.person);
+
+  @override
+  final Person person;
+
+  @override
+  String toString() {
+    return 'PeopleEvent.addToFavorites(person: $person)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddToFavoritesImpl &&
+            (identical(other.person, person) || other.person == person));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, person);
+
+  /// Create a copy of PeopleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddToFavoritesImplCopyWith<_$AddToFavoritesImpl> get copyWith =>
+      __$$AddToFavoritesImplCopyWithImpl<_$AddToFavoritesImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getPeople,
+    required TResult Function(String query) searchPeople,
+    required TResult Function(Person person) addToFavorites,
+  }) {
+    return addToFavorites(person);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getPeople,
+    TResult? Function(String query)? searchPeople,
+    TResult? Function(Person person)? addToFavorites,
+  }) {
+    return addToFavorites?.call(person);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getPeople,
+    TResult Function(String query)? searchPeople,
+    TResult Function(Person person)? addToFavorites,
+    required TResult orElse(),
+  }) {
+    if (addToFavorites != null) {
+      return addToFavorites(person);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetPeople value) getPeople,
+    required TResult Function(_SearchPeople value) searchPeople,
+    required TResult Function(_AddToFavorites value) addToFavorites,
+  }) {
+    return addToFavorites(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetPeople value)? getPeople,
+    TResult? Function(_SearchPeople value)? searchPeople,
+    TResult? Function(_AddToFavorites value)? addToFavorites,
+  }) {
+    return addToFavorites?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetPeople value)? getPeople,
+    TResult Function(_SearchPeople value)? searchPeople,
+    TResult Function(_AddToFavorites value)? addToFavorites,
+    required TResult orElse(),
+  }) {
+    if (addToFavorites != null) {
+      return addToFavorites(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddToFavorites implements PeopleEvent {
+  const factory _AddToFavorites(final Person person) = _$AddToFavoritesImpl;
+
+  Person get person;
+
+  /// Create a copy of PeopleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddToFavoritesImplCopyWith<_$AddToFavoritesImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -175,6 +492,8 @@ mixin _$PeopleState {
   bool get isLoading => throw _privateConstructorUsedError;
   PeopleStatus get status => throw _privateConstructorUsedError;
   List<Person>? get people => throw _privateConstructorUsedError;
+  List<Person>? get allPeople => throw _privateConstructorUsedError;
+  List<Person> get favorites => throw _privateConstructorUsedError;
 
   /// Create a copy of PeopleState
   /// with the given fields replaced by the non-null parameter values.
@@ -189,7 +508,12 @@ abstract class $PeopleStateCopyWith<$Res> {
           PeopleState value, $Res Function(PeopleState) then) =
       _$PeopleStateCopyWithImpl<$Res, PeopleState>;
   @useResult
-  $Res call({bool isLoading, PeopleStatus status, List<Person>? people});
+  $Res call(
+      {bool isLoading,
+      PeopleStatus status,
+      List<Person>? people,
+      List<Person>? allPeople,
+      List<Person> favorites});
 }
 
 /// @nodoc
@@ -210,6 +534,8 @@ class _$PeopleStateCopyWithImpl<$Res, $Val extends PeopleState>
     Object? isLoading = null,
     Object? status = null,
     Object? people = freezed,
+    Object? allPeople = freezed,
+    Object? favorites = null,
   }) {
     return _then(_value.copyWith(
       isLoading: null == isLoading
@@ -224,6 +550,14 @@ class _$PeopleStateCopyWithImpl<$Res, $Val extends PeopleState>
           ? _value.people
           : people // ignore: cast_nullable_to_non_nullable
               as List<Person>?,
+      allPeople: freezed == allPeople
+          ? _value.allPeople
+          : allPeople // ignore: cast_nullable_to_non_nullable
+              as List<Person>?,
+      favorites: null == favorites
+          ? _value.favorites
+          : favorites // ignore: cast_nullable_to_non_nullable
+              as List<Person>,
     ) as $Val);
   }
 }
@@ -236,7 +570,12 @@ abstract class _$$PeopleStateImplCopyWith<$Res>
       __$$PeopleStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool isLoading, PeopleStatus status, List<Person>? people});
+  $Res call(
+      {bool isLoading,
+      PeopleStatus status,
+      List<Person>? people,
+      List<Person>? allPeople,
+      List<Person> favorites});
 }
 
 /// @nodoc
@@ -255,6 +594,8 @@ class __$$PeopleStateImplCopyWithImpl<$Res>
     Object? isLoading = null,
     Object? status = null,
     Object? people = freezed,
+    Object? allPeople = freezed,
+    Object? favorites = null,
   }) {
     return _then(_$PeopleStateImpl(
       isLoading: null == isLoading
@@ -269,6 +610,14 @@ class __$$PeopleStateImplCopyWithImpl<$Res>
           ? _value._people
           : people // ignore: cast_nullable_to_non_nullable
               as List<Person>?,
+      allPeople: freezed == allPeople
+          ? _value._allPeople
+          : allPeople // ignore: cast_nullable_to_non_nullable
+              as List<Person>?,
+      favorites: null == favorites
+          ? _value._favorites
+          : favorites // ignore: cast_nullable_to_non_nullable
+              as List<Person>,
     ));
   }
 }
@@ -279,8 +628,12 @@ class _$PeopleStateImpl implements _PeopleState {
   const _$PeopleStateImpl(
       {required this.isLoading,
       required this.status,
-      required final List<Person>? people})
-      : _people = people;
+      required final List<Person>? people,
+      required final List<Person>? allPeople,
+      required final List<Person> favorites})
+      : _people = people,
+        _allPeople = allPeople,
+        _favorites = favorites;
 
   @override
   final bool isLoading;
@@ -296,9 +649,27 @@ class _$PeopleStateImpl implements _PeopleState {
     return EqualUnmodifiableListView(value);
   }
 
+  final List<Person>? _allPeople;
+  @override
+  List<Person>? get allPeople {
+    final value = _allPeople;
+    if (value == null) return null;
+    if (_allPeople is EqualUnmodifiableListView) return _allPeople;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Person> _favorites;
+  @override
+  List<Person> get favorites {
+    if (_favorites is EqualUnmodifiableListView) return _favorites;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_favorites);
+  }
+
   @override
   String toString() {
-    return 'PeopleState(isLoading: $isLoading, status: $status, people: $people)';
+    return 'PeopleState(isLoading: $isLoading, status: $status, people: $people, allPeople: $allPeople, favorites: $favorites)';
   }
 
   @override
@@ -309,12 +680,21 @@ class _$PeopleStateImpl implements _PeopleState {
             (identical(other.isLoading, isLoading) ||
                 other.isLoading == isLoading) &&
             (identical(other.status, status) || other.status == status) &&
-            const DeepCollectionEquality().equals(other._people, _people));
+            const DeepCollectionEquality().equals(other._people, _people) &&
+            const DeepCollectionEquality()
+                .equals(other._allPeople, _allPeople) &&
+            const DeepCollectionEquality()
+                .equals(other._favorites, _favorites));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, isLoading, status,
-      const DeepCollectionEquality().hash(_people));
+  int get hashCode => Object.hash(
+      runtimeType,
+      isLoading,
+      status,
+      const DeepCollectionEquality().hash(_people),
+      const DeepCollectionEquality().hash(_allPeople),
+      const DeepCollectionEquality().hash(_favorites));
 
   /// Create a copy of PeopleState
   /// with the given fields replaced by the non-null parameter values.
@@ -329,7 +709,9 @@ abstract class _PeopleState implements PeopleState {
   const factory _PeopleState(
       {required final bool isLoading,
       required final PeopleStatus status,
-      required final List<Person>? people}) = _$PeopleStateImpl;
+      required final List<Person>? people,
+      required final List<Person>? allPeople,
+      required final List<Person> favorites}) = _$PeopleStateImpl;
 
   @override
   bool get isLoading;
@@ -337,6 +719,10 @@ abstract class _PeopleState implements PeopleState {
   PeopleStatus get status;
   @override
   List<Person>? get people;
+  @override
+  List<Person>? get allPeople;
+  @override
+  List<Person> get favorites;
 
   /// Create a copy of PeopleState
   /// with the given fields replaced by the non-null parameter values.

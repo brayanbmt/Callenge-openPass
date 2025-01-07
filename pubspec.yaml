@@ -37,12 +37,21 @@ flutter:
   uses-material-design: true
 
   fonts:
-    - family:  PokemonHollow
+    - family:  StarJedi
       fonts:
-        - asset: assets/fonts/PokemonHollow.ttf
-    - family:  PokemonSolid
+        - asset: assets/fonts/star_jedi_font/starjedi.ttf
+          
+    - family:  StarJhol
       fonts:
-        - asset: assets/fonts/PokemonSolid.ttf   
+        - asset: assets/fonts/star_jedi_font/starjhol.ttf
+
+    - family:  StJediSe
+      fonts:
+        - asset: assets/fonts/star_jedi_font/stjedise.ttf     
+
+    - family:  StarJourt
+      fonts:
+        - asset: assets/fonts/star_jourt_font/starjout.ttf
 
   assets:
     - assets/

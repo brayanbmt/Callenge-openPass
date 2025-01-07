@@ -2,7 +2,6 @@ import 'package:challenge_open_pass/theme/theme.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 
-// Estado de tema
 abstract class ThemeState {}
 
 class ThemeChangedState extends ThemeState {
@@ -10,7 +9,6 @@ class ThemeChangedState extends ThemeState {
   ThemeChangedState(this.theme);
 }
 
-// Evento de cambio de tema
 abstract class ThemeEvent {}
 
 class ToggleThemeEvent extends ThemeEvent {}

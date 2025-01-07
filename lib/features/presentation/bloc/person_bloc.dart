@@ -3,8 +3,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:challenge_open_pass/features/data/repositories/api_service.dart';
 import 'package:challenge_open_pass/features/data/models/person.dart';
 
-
-
 part 'person_event.dart';
 part 'person_state.dart';
 part 'person_bloc.freezed.dart';
@@ -15,33 +13,27 @@ class PeopleBloc extends Bloc<PeopleEvent, PeopleState> {
   })  : _apiRepository = apiRepository,
         super(PeopleState.initial()) {
     on<PeopleEvent>(
-      (events, emit) => events.map(
+      (event, emit) => event.map(
         getPeople: (event) => _getPeople(emit),
+        searchPeople: (event) => _searchPeople(event.query, emit),
+        addToFavorites: (event) => _addToFavorites(event.person, emit),
       ),
     );
   }
 
   final ApiService _apiRepository;
 
-  
-
-  _getPeople(Emitter<PeopleState> emit) async {
+  Future<void> _getPeople(Emitter<PeopleState> emit) async {
     emit(
       state.copyWith(
         isLoading: true,
       ),
     );
-    // unawaited(
-    //   startLoadingModal(),
-    // );
 
     final response = await _apiRepository.fetchPeople();
 
-    // await stopLoadingModal();
-
     return response.fold(
       (l) async {
-        // logger.error('Error: $l');
         emit(
           state.copyWith(
             isLoading: false,
@@ -56,11 +48,35 @@ class PeopleBloc extends Bloc<PeopleEvent, PeopleState> {
             isLoading: false,
             status: PeopleStatus.success,
             people: peopleList,
+            allPeople: peopleList,
           ),
         );
       },
     );
   }
 
-  
+  void _searchPeople(String query, Emitter<PeopleState> emit) {
+    if (state.allPeople == null) {
+      return;
+    }
+
+    final filteredPeople = state.allPeople!
+        .where((person) => person.name.toLowerCase().contains(query.toLowerCase()))
+        .toList();
+
+    emit(state.copyWith(
+      people: filteredPeople,
+      status: PeopleStatus.success,
+    ));
+  }
+
+  void _addToFavorites(Person person, Emitter<PeopleState> emit) {
+    final updatedFavorites = List<Person>.from(state.favorites)..add(person);
+
+    emit(state.copyWith(
+      favorites: updatedFavorites,
+      status: PeopleStatus.success,
+    ));
+  }
 }
+

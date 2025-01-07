@@ -1,6 +1,6 @@
 import 'package:challenge_open_pass/features/data/repositories/api_service.dart';
 import 'package:challenge_open_pass/features/presentation/bloc/person_bloc.dart';
-import 'package:challenge_open_pass/features/presentation/bloc/theme_bloc/theme_bloc.dart';
+import 'package:challenge_open_pass/core/theme_bloc/theme_bloc.dart';
 import 'package:challenge_open_pass/features/presentation/pages/home_page.dart';
 import 'package:challenge_open_pass/theme/theme.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         final currentTheme =
             state is ThemeChangedState ? state.theme : AppTheme.lightTheme;
         return MaterialApp(
-          title: 'Star Wars Characters',
+          title: 'Star Wars',
           theme: currentTheme, 
           home: const HomePage(), 
         );
