@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:challenge_open_pass/core/constants.dart';
-import 'package:challenge_open_pass/features/data/exceptions/api_exceptions.dart';
-import 'package:challenge_open_pass/features/data/models/response/get_character_response.dart';
+import 'package:challenge_open_pass/features/people/data/exceptions/api_exceptions.dart';
+import 'package:challenge_open_pass/features/people/data/models/response/get_character_response.dart';
 import 'package:dartz/dartz.dart';
 import 'package:http/http.dart' as http;
 
