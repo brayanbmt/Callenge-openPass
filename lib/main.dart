@@ -1,7 +1,7 @@
-import 'package:challenge_open_pass/features/data/repositories/api_service.dart';
-import 'package:challenge_open_pass/features/presentation/bloc/person_bloc.dart';
+import 'package:challenge_open_pass/features/people/data/repositories/api_service.dart';
+import 'package:challenge_open_pass/features/people/presentation/bloc/person_bloc.dart';
 import 'package:challenge_open_pass/core/theme_bloc/theme_bloc.dart';
-import 'package:challenge_open_pass/features/presentation/pages/home_page.dart';
+import 'package:challenge_open_pass/features/people/presentation/pages/home_page.dart';
 import 'package:challenge_open_pass/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
