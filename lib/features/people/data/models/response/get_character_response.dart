@@ -1,4 +1,4 @@
-import 'package:challenge_open_pass/features/data/models/person.dart';
+import 'package:challenge_open_pass/features/people/data/models/person.dart';
 
 class GetCharacterResponse {
   int count;

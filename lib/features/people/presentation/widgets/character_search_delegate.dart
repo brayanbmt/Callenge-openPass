@@ -1,5 +1,5 @@
-import 'package:challenge_open_pass/features/presentation/bloc/person_bloc.dart';
-import 'package:challenge_open_pass/features/presentation/widgets/character_card.dart';
+import 'package:challenge_open_pass/features/people/presentation/bloc/person_bloc.dart';
+import 'package:challenge_open_pass/features/people/presentation/widgets/character_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

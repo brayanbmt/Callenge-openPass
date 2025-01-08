@@ -1,7 +1,8 @@
 import 'package:bloc/bloc.dart';
+import 'package:challenge_open_pass/features/people/data/repositories/api_service.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:challenge_open_pass/features/data/repositories/api_service.dart';
-import 'package:challenge_open_pass/features/data/models/person.dart';
+import 'package:challenge_open_pass/features/people/data/models/person.dart';
+
 
 part 'person_event.dart';
 part 'person_state.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:challenge_open_pass/features/presentation/bloc/person_bloc.dart';
+import 'package:challenge_open_pass/features/people/presentation/bloc/person_bloc.dart';
 
 class FavoritesPage extends StatefulWidget {
   const FavoritesPage({Key? key}) : super(key: key);
