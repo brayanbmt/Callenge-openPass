@@ -23,25 +23,24 @@ class HomePage extends StatelessWidget {
             slivers: [
               SliverAppBar(
                 leading: IconButton(
-    icon: const Icon(Icons.favorite),
-    onPressed: () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const FavoritesPage(),
-        ),
-      );
-    },
-  ),
+                  icon: const Icon(Icons.favorite),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const FavoritesPage(),
+                      ),
+                    );
+                  },
+                ),
                 actions: [
-                    IconButton(
-                                      icon: const Icon(Icons.brightness_6),
-                                      onPressed: () {
-                  BlocProvider.of<ThemeBloc>(context)
-                      .add(ToggleThemeEvent());
-                                      },
-                                    ),
-                
+                  IconButton(
+                    icon: const Icon(Icons.brightness_6),
+                    onPressed: () {
+                      BlocProvider.of<ThemeBloc>(context)
+                          .add(ToggleThemeEvent());
+                    },
+                  ),
                 ],
                 expandedHeight: 200.0,
                 floating: false,
