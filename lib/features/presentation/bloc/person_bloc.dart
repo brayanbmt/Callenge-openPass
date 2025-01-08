@@ -13,12 +13,13 @@ class PeopleBloc extends Bloc<PeopleEvent, PeopleState> {
   })  : _apiRepository = apiRepository,
         super(PeopleState.initial()) {
     on<PeopleEvent>(
-      (event, emit) => event.map(
-        getPeople: (event) => _getPeople(emit),
-        searchPeople: (event) => _searchPeople(event.query, emit),
-        addToFavorites: (event) => _addToFavorites(event.person, emit),
-      ),
-    );
+  (event, emit) => event.map(
+    getPeople: (event) => _getPeople(emit),
+    searchPeople: (event) => _searchPeople(event.query, emit),
+    addToFavorites: (event) => _addToFavorites(event.person, emit),
+    removeFromFavorites: (event) => _removeFromFavorites(event.person, emit),
+  ),
+);
   }
 
   final ApiService _apiRepository;
@@ -72,11 +73,16 @@ class PeopleBloc extends Bloc<PeopleEvent, PeopleState> {
 
   void _addToFavorites(Person person, Emitter<PeopleState> emit) {
     final updatedFavorites = List<Person>.from(state.favorites)..add(person);
-
     emit(state.copyWith(
       favorites: updatedFavorites,
       status: PeopleStatus.success,
     ));
   }
+
+  Future<void> _removeFromFavorites(Person person, Emitter<PeopleState> emit) async {
+  final updatedFavorites = List<Person>.from(state.favorites)
+    ..removeWhere((fav) => fav.name == person.name);
+  emit(state.copyWith(favorites: updatedFavorites));
+}
 }
 

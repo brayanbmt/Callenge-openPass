@@ -1,38 +1,38 @@
 class Person {
   String name;
   String height;
-  String mass;
+  String? mass;
   String hairColor;
-  String skinColor;
+  String? skinColor;
   String eyeColor;
-  String birthYear;
+  String? birthYear;
   String gender;
   String homeworld;
-  List<String> films;
-  List<String> species;
-  List<String> vehicles;
-  List<String> starships;
-  String created;
-  String edited;
-  String url;
+  List<String>? films;
+  List<String>? species;
+  List<String>? vehicles;
+  List<String>? starships;
+  String? created;
+  String? edited;
+  String? url;
 
   Person({
     required this.name,
     required this.height,
-    required this.mass,
+    this.mass,
     required this.hairColor,
-    required this.skinColor,
+    this.skinColor,
     required this.eyeColor,
-    required this.birthYear,
+    this.birthYear,
     required this.gender,
     required this.homeworld,
-    required this.films,
-    required this.species,
-    required this.vehicles,
-    required this.starships,
-    required this.created,
-    required this.edited,
-    required this.url,
+    this.films,
+    this.species,
+    this.vehicles,
+    this.starships,
+    this.created,
+    this.edited,
+    this.url,
   });
 
   factory Person.fromJson(Map<String, dynamic> json) {

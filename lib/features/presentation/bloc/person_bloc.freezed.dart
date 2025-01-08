@@ -21,6 +21,7 @@ mixin _$PeopleEvent {
     required TResult Function() getPeople,
     required TResult Function(String query) searchPeople,
     required TResult Function(Person person) addToFavorites,
+    required TResult Function(Person person) removeFromFavorites,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$PeopleEvent {
     TResult? Function()? getPeople,
     TResult? Function(String query)? searchPeople,
     TResult? Function(Person person)? addToFavorites,
+    TResult? Function(Person person)? removeFromFavorites,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$PeopleEvent {
     TResult Function()? getPeople,
     TResult Function(String query)? searchPeople,
     TResult Function(Person person)? addToFavorites,
+    TResult Function(Person person)? removeFromFavorites,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +46,7 @@ mixin _$PeopleEvent {
     required TResult Function(_GetPeople value) getPeople,
     required TResult Function(_SearchPeople value) searchPeople,
     required TResult Function(_AddToFavorites value) addToFavorites,
+    required TResult Function(_RemoveFromFavorites value) removeFromFavorites,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +54,7 @@ mixin _$PeopleEvent {
     TResult? Function(_GetPeople value)? getPeople,
     TResult? Function(_SearchPeople value)? searchPeople,
     TResult? Function(_AddToFavorites value)? addToFavorites,
+    TResult? Function(_RemoveFromFavorites value)? removeFromFavorites,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +62,7 @@ mixin _$PeopleEvent {
     TResult Function(_GetPeople value)? getPeople,
     TResult Function(_SearchPeople value)? searchPeople,
     TResult Function(_AddToFavorites value)? addToFavorites,
+    TResult Function(_RemoveFromFavorites value)? removeFromFavorites,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -127,6 +133,7 @@ class _$GetPeopleImpl implements _GetPeople {
     required TResult Function() getPeople,
     required TResult Function(String query) searchPeople,
     required TResult Function(Person person) addToFavorites,
+    required TResult Function(Person person) removeFromFavorites,
   }) {
     return getPeople();
   }
@@ -137,6 +144,7 @@ class _$GetPeopleImpl implements _GetPeople {
     TResult? Function()? getPeople,
     TResult? Function(String query)? searchPeople,
     TResult? Function(Person person)? addToFavorites,
+    TResult? Function(Person person)? removeFromFavorites,
   }) {
     return getPeople?.call();
   }
@@ -147,6 +155,7 @@ class _$GetPeopleImpl implements _GetPeople {
     TResult Function()? getPeople,
     TResult Function(String query)? searchPeople,
     TResult Function(Person person)? addToFavorites,
+    TResult Function(Person person)? removeFromFavorites,
     required TResult orElse(),
   }) {
     if (getPeople != null) {
@@ -161,6 +170,7 @@ class _$GetPeopleImpl implements _GetPeople {
     required TResult Function(_GetPeople value) getPeople,
     required TResult Function(_SearchPeople value) searchPeople,
     required TResult Function(_AddToFavorites value) addToFavorites,
+    required TResult Function(_RemoveFromFavorites value) removeFromFavorites,
   }) {
     return getPeople(this);
   }
@@ -171,6 +181,7 @@ class _$GetPeopleImpl implements _GetPeople {
     TResult? Function(_GetPeople value)? getPeople,
     TResult? Function(_SearchPeople value)? searchPeople,
     TResult? Function(_AddToFavorites value)? addToFavorites,
+    TResult? Function(_RemoveFromFavorites value)? removeFromFavorites,
   }) {
     return getPeople?.call(this);
   }
@@ -181,6 +192,7 @@ class _$GetPeopleImpl implements _GetPeople {
     TResult Function(_GetPeople value)? getPeople,
     TResult Function(_SearchPeople value)? searchPeople,
     TResult Function(_AddToFavorites value)? addToFavorites,
+    TResult Function(_RemoveFromFavorites value)? removeFromFavorites,
     required TResult orElse(),
   }) {
     if (getPeople != null) {
@@ -265,6 +277,7 @@ class _$SearchPeopleImpl implements _SearchPeople {
     required TResult Function() getPeople,
     required TResult Function(String query) searchPeople,
     required TResult Function(Person person) addToFavorites,
+    required TResult Function(Person person) removeFromFavorites,
   }) {
     return searchPeople(query);
   }
@@ -275,6 +288,7 @@ class _$SearchPeopleImpl implements _SearchPeople {
     TResult? Function()? getPeople,
     TResult? Function(String query)? searchPeople,
     TResult? Function(Person person)? addToFavorites,
+    TResult? Function(Person person)? removeFromFavorites,
   }) {
     return searchPeople?.call(query);
   }
@@ -285,6 +299,7 @@ class _$SearchPeopleImpl implements _SearchPeople {
     TResult Function()? getPeople,
     TResult Function(String query)? searchPeople,
     TResult Function(Person person)? addToFavorites,
+    TResult Function(Person person)? removeFromFavorites,
     required TResult orElse(),
   }) {
     if (searchPeople != null) {
@@ -299,6 +314,7 @@ class _$SearchPeopleImpl implements _SearchPeople {
     required TResult Function(_GetPeople value) getPeople,
     required TResult Function(_SearchPeople value) searchPeople,
     required TResult Function(_AddToFavorites value) addToFavorites,
+    required TResult Function(_RemoveFromFavorites value) removeFromFavorites,
   }) {
     return searchPeople(this);
   }
@@ -309,6 +325,7 @@ class _$SearchPeopleImpl implements _SearchPeople {
     TResult? Function(_GetPeople value)? getPeople,
     TResult? Function(_SearchPeople value)? searchPeople,
     TResult? Function(_AddToFavorites value)? addToFavorites,
+    TResult? Function(_RemoveFromFavorites value)? removeFromFavorites,
   }) {
     return searchPeople?.call(this);
   }
@@ -319,6 +336,7 @@ class _$SearchPeopleImpl implements _SearchPeople {
     TResult Function(_GetPeople value)? getPeople,
     TResult Function(_SearchPeople value)? searchPeople,
     TResult Function(_AddToFavorites value)? addToFavorites,
+    TResult Function(_RemoveFromFavorites value)? removeFromFavorites,
     required TResult orElse(),
   }) {
     if (searchPeople != null) {
@@ -412,6 +430,7 @@ class _$AddToFavoritesImpl implements _AddToFavorites {
     required TResult Function() getPeople,
     required TResult Function(String query) searchPeople,
     required TResult Function(Person person) addToFavorites,
+    required TResult Function(Person person) removeFromFavorites,
   }) {
     return addToFavorites(person);
   }
@@ -422,6 +441,7 @@ class _$AddToFavoritesImpl implements _AddToFavorites {
     TResult? Function()? getPeople,
     TResult? Function(String query)? searchPeople,
     TResult? Function(Person person)? addToFavorites,
+    TResult? Function(Person person)? removeFromFavorites,
   }) {
     return addToFavorites?.call(person);
   }
@@ -432,6 +452,7 @@ class _$AddToFavoritesImpl implements _AddToFavorites {
     TResult Function()? getPeople,
     TResult Function(String query)? searchPeople,
     TResult Function(Person person)? addToFavorites,
+    TResult Function(Person person)? removeFromFavorites,
     required TResult orElse(),
   }) {
     if (addToFavorites != null) {
@@ -446,6 +467,7 @@ class _$AddToFavoritesImpl implements _AddToFavorites {
     required TResult Function(_GetPeople value) getPeople,
     required TResult Function(_SearchPeople value) searchPeople,
     required TResult Function(_AddToFavorites value) addToFavorites,
+    required TResult Function(_RemoveFromFavorites value) removeFromFavorites,
   }) {
     return addToFavorites(this);
   }
@@ -456,6 +478,7 @@ class _$AddToFavoritesImpl implements _AddToFavorites {
     TResult? Function(_GetPeople value)? getPeople,
     TResult? Function(_SearchPeople value)? searchPeople,
     TResult? Function(_AddToFavorites value)? addToFavorites,
+    TResult? Function(_RemoveFromFavorites value)? removeFromFavorites,
   }) {
     return addToFavorites?.call(this);
   }
@@ -466,6 +489,7 @@ class _$AddToFavoritesImpl implements _AddToFavorites {
     TResult Function(_GetPeople value)? getPeople,
     TResult Function(_SearchPeople value)? searchPeople,
     TResult Function(_AddToFavorites value)? addToFavorites,
+    TResult Function(_RemoveFromFavorites value)? removeFromFavorites,
     required TResult orElse(),
   }) {
     if (addToFavorites != null) {
@@ -484,6 +508,160 @@ abstract class _AddToFavorites implements PeopleEvent {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddToFavoritesImplCopyWith<_$AddToFavoritesImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$RemoveFromFavoritesImplCopyWith<$Res> {
+  factory _$$RemoveFromFavoritesImplCopyWith(_$RemoveFromFavoritesImpl value,
+          $Res Function(_$RemoveFromFavoritesImpl) then) =
+      __$$RemoveFromFavoritesImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Person person});
+}
+
+/// @nodoc
+class __$$RemoveFromFavoritesImplCopyWithImpl<$Res>
+    extends _$PeopleEventCopyWithImpl<$Res, _$RemoveFromFavoritesImpl>
+    implements _$$RemoveFromFavoritesImplCopyWith<$Res> {
+  __$$RemoveFromFavoritesImplCopyWithImpl(_$RemoveFromFavoritesImpl _value,
+      $Res Function(_$RemoveFromFavoritesImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PeopleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? person = null,
+  }) {
+    return _then(_$RemoveFromFavoritesImpl(
+      null == person
+          ? _value.person
+          : person // ignore: cast_nullable_to_non_nullable
+              as Person,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$RemoveFromFavoritesImpl implements _RemoveFromFavorites {
+  const _$RemoveFromFavoritesImpl(this.person);
+
+  @override
+  final Person person;
+
+  @override
+  String toString() {
+    return 'PeopleEvent.removeFromFavorites(person: $person)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$RemoveFromFavoritesImpl &&
+            (identical(other.person, person) || other.person == person));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, person);
+
+  /// Create a copy of PeopleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$RemoveFromFavoritesImplCopyWith<_$RemoveFromFavoritesImpl> get copyWith =>
+      __$$RemoveFromFavoritesImplCopyWithImpl<_$RemoveFromFavoritesImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getPeople,
+    required TResult Function(String query) searchPeople,
+    required TResult Function(Person person) addToFavorites,
+    required TResult Function(Person person) removeFromFavorites,
+  }) {
+    return removeFromFavorites(person);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getPeople,
+    TResult? Function(String query)? searchPeople,
+    TResult? Function(Person person)? addToFavorites,
+    TResult? Function(Person person)? removeFromFavorites,
+  }) {
+    return removeFromFavorites?.call(person);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getPeople,
+    TResult Function(String query)? searchPeople,
+    TResult Function(Person person)? addToFavorites,
+    TResult Function(Person person)? removeFromFavorites,
+    required TResult orElse(),
+  }) {
+    if (removeFromFavorites != null) {
+      return removeFromFavorites(person);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetPeople value) getPeople,
+    required TResult Function(_SearchPeople value) searchPeople,
+    required TResult Function(_AddToFavorites value) addToFavorites,
+    required TResult Function(_RemoveFromFavorites value) removeFromFavorites,
+  }) {
+    return removeFromFavorites(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetPeople value)? getPeople,
+    TResult? Function(_SearchPeople value)? searchPeople,
+    TResult? Function(_AddToFavorites value)? addToFavorites,
+    TResult? Function(_RemoveFromFavorites value)? removeFromFavorites,
+  }) {
+    return removeFromFavorites?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetPeople value)? getPeople,
+    TResult Function(_SearchPeople value)? searchPeople,
+    TResult Function(_AddToFavorites value)? addToFavorites,
+    TResult Function(_RemoveFromFavorites value)? removeFromFavorites,
+    required TResult orElse(),
+  }) {
+    if (removeFromFavorites != null) {
+      return removeFromFavorites(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RemoveFromFavorites implements PeopleEvent {
+  const factory _RemoveFromFavorites(final Person person) =
+      _$RemoveFromFavoritesImpl;
+
+  Person get person;
+
+  /// Create a copy of PeopleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RemoveFromFavoritesImplCopyWith<_$RemoveFromFavoritesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

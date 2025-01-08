@@ -1,4 +1,7 @@
+import 'package:challenge_open_pass/features/data/models/person.dart';
+import 'package:challenge_open_pass/features/presentation/bloc/person_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CharacterCard extends StatelessWidget {
   final String name;
@@ -32,10 +35,7 @@ class CharacterCard extends StatelessWidget {
             borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
           ),
           builder: (BuildContext context) {
-            return _buildCharacterModal(
-              context: context,
-              theme: theme,
-            );
+            return _buildCharacterModal(context, theme);
           },
         );
       },
@@ -71,16 +71,45 @@ class CharacterCard extends StatelessWidget {
                         fontFamily: "StarJedi",
                       ),
                     ),
-                    Icon(
-                        Icons.star,
-                        color: Colors.yellow[700],
-                        size: 30.0,
-                      ),
+                    BlocBuilder<PeopleBloc, PeopleState>(
+                      builder: (context, state) {
+                        final isFavorite = state.favorites
+                            .any((person) => person.name == name);
+
+                        return GestureDetector(
+                          onTap: () {
+                            final person = Person(
+                              name: name,
+                              eyeColor: eyeColor,
+                              hairColor: hairColor,
+                              height: height,
+                              gender: gender,
+                              homeworld: originPlanet,
+                            );
+                            if (isFavorite) {
+                              context
+                                  .read<PeopleBloc>()
+                                  .add(PeopleEvent.removeFromFavorites(person));
+                            } else {
+                              context
+                                  .read<PeopleBloc>()
+                                  .add(PeopleEvent.addToFavorites(person));
+                            }
+                          },
+                          child: Icon(
+                            Icons.star,
+                            color:
+                                isFavorite ? Colors.yellow[700] : Colors.grey,
+                            size: 30.0,
+                          ),
+                        );
+                      },
+                    ),
                   ],
                 ),
                 const SizedBox(height: 8.0),
                 Text(
-                  'Detalles del personaje:',
+                  'Toca para ver detalles del personaje',
                   style: TextStyle(
                     fontSize: screenWidth > 600 ? 16.0 : 14.0,
                     color: theme.primaryColorDark,
@@ -94,8 +123,7 @@ class CharacterCard extends StatelessWidget {
     );
   }
 
-  Widget _buildCharacterModal(
-      {required BuildContext context, required ThemeData theme}) {
+  Widget _buildCharacterModal(BuildContext context, ThemeData theme) {
     return Stack(
       clipBehavior: Clip.none,
       children: [
@@ -117,13 +145,39 @@ class CharacterCard extends StatelessWidget {
                         fontFamily: "StarJedi",
                       ),
                     ),
-                    GestureDetector(
-                      onTap: (){},
-                      child: Icon(
-                        Icons.star,
-                        color: Colors.yellow[700],
-                        size: 30.0,
-                      ),
+                    BlocBuilder<PeopleBloc, PeopleState>(
+                      builder: (context, state) {
+                        final isFavorite = state.favorites
+                            .any((person) => person.name == name);
+
+                        return GestureDetector(
+                          onTap: () {
+                            final person = Person(
+                              name: name,
+                              eyeColor: eyeColor,
+                              hairColor: hairColor,
+                              height: height,
+                              gender: gender,
+                              homeworld: originPlanet,
+                            );
+                            if (isFavorite) {
+                              context
+                                  .read<PeopleBloc>()
+                                  .add(PeopleEvent.removeFromFavorites(person));
+                            } else {
+                              context
+                                  .read<PeopleBloc>()
+                                  .add(PeopleEvent.addToFavorites(person));
+                            }
+                          },
+                          child: Icon(
+                            Icons.star,
+                            color:
+                                isFavorite ? Colors.yellow[700] : Colors.grey,
+                            size: 30.0,
+                          ),
+                        );
+                      },
                     ),
                   ],
                 ),

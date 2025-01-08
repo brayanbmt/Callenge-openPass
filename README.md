@@ -60,13 +60,6 @@ _Herramientas usadas en el proyecto_
 
 * [Flutter](https://docs.flutter.dev/) - El framework **multiplataforma** usado.
 * [BLoC](https://bloclibrary.dev/getting-started/) - Manejador de estado - Bussiness Logic Component.
-* [GoRouter](https://pub.dev/packages/go_router) - Paquete manejador de rutas declarativo.
 
 
-## Enlaces de interes 🎁 (En desarrollo)
 
-_Los siguientes son unos enlaces de interes para entender mas acerca de flutter y las herramientas usadas:_
-
-
-* [GoRouter](https://docs.page/bizz84/go_router_archived/getting-started)
-* [Flutter go_router: The Essential Guide](https://medium.com/@antonio.tioypedro1234/flutter-go-router-the-essential-guide-349ef39ec5b3)

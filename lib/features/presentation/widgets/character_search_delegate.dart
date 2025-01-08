@@ -44,14 +44,14 @@ class CharacterSearchDelegate extends SearchDelegate<String> {
             itemCount: filteredPeople.length,
             itemBuilder: (context, index) {
               final person = filteredPeople[index];
-              return  CharacterCard(
-                      name: person.name ,
-                      eyeColor: person.eyeColor,
-                      gender: person.gender,
-                      hairColor: person.hairColor,
-                      height: person.height ,
-                      originPlanet: person.homeworld ,
-                    );
+              return CharacterCard(
+                name: person.name,
+                eyeColor: person.eyeColor,
+                gender: person.gender,
+                hairColor: person.hairColor,
+                height: person.height,
+                originPlanet: person.homeworld,
+              );
             },
           );
         }

@@ -27,8 +27,9 @@ class MyApp extends StatelessWidget {
     return BlocBuilder<ThemeBloc, ThemeState>(
       builder: (context, state) {
         final currentTheme =
-            state is ThemeChangedState ? state.theme : AppTheme.lightTheme;
+            state is ThemeChangedState ? state.theme : AppTheme.darkTheme;
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Star Wars',
           theme: currentTheme, 
           home: const HomePage(), 

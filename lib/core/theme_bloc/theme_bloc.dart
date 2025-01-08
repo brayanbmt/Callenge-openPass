@@ -14,7 +14,7 @@ abstract class ThemeEvent {}
 class ToggleThemeEvent extends ThemeEvent {}
 
 class ThemeBloc extends Bloc<ThemeEvent, ThemeState> {
-  ThemeBloc() : super(ThemeChangedState(AppTheme.lightTheme)) {
+  ThemeBloc() : super(ThemeChangedState(AppTheme.darkTheme)) {
     on<ToggleThemeEvent>((event, emit) {
       if (state is ThemeChangedState) {
         final currentTheme = state as ThemeChangedState;
